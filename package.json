@@ -1,15 +1,14 @@
 {
   "name": "fin-urls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "detecting URLs emails and IPs for Fin NLP",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types":"./dist/index.d.ts",
   "dependencies": {
-    "anchorme": "^0.8.3",
-    "finnlp": "^1.0.6"
+    "anchorme": "^1.0.4"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "mocha test"
+  "devDependencies": {
+    "finnlp": "^1.0.6"
   },
   "repository": {
     "type": "git",
