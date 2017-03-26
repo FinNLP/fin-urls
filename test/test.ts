@@ -14,7 +14,7 @@ function pass (msg:string) {
 
 function assert (sentence:string,expectedNum:number) {
 	const inst = new Fin.Run(sentence);
-	const result = inst.links()[0].length;
+	const result = inst.links()[0].filter(x=>x).length;
 	if(result === expectedNum) pass(sentence);
 	else fail(`sentence ${sentence} detected ${result} links while we were expecting ${expectedNum}. Here's the interception result: ${inst.intercepted}`);
 }
