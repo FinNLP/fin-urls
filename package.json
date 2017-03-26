@@ -4,6 +4,11 @@
   "description": "detecting URLs emails and IPs for Fin NLP",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "scripts": {
+    "test":"ts-node test/test.ts",
+    "build":"tsc",
+    "prepublish": "ts-node test/test.ts && tsc"
+  },
   "dependencies": {
     "anchorme": "^1.0.4"
   },
