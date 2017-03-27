@@ -32,12 +32,12 @@ Fin.postProcessors.push(function(processingResult:Fin.Run){
 // detector
 declare module "finnlp" {
 	export interface Run {
-		links:()=>({type:string,url:string}|false)[][];
+		links:()=>({type:string,token:string}|false)[][];
 	}
 }
 
 Fin.Run.prototype.links = function(this:Fin.Run){
-	const result:({type:string,url:string}|false)[][] = [];
+	const result:({type:string,token:string}|false)[][] = [];
 	this.sentences.forEach((sentence,sentenceIndex)=>{
 		result[sentenceIndex] = sentence.tokens
 		.map((token)=>{
@@ -45,7 +45,7 @@ Fin.Run.prototype.links = function(this:Fin.Run){
 			if(!result.length) return false;
 			else return {
 				type:result[0].reason,
-				url:result[0].raw
+				token:result[0].raw
 			};
 		});
 	});
