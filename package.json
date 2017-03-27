@@ -1,6 +1,6 @@
 {
   "name": "fin-urls",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "detecting URLs emails and IPs for Fin NLP",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
